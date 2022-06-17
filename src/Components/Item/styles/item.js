@@ -2,19 +2,37 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     display: flex;
+    flex-direction: column;
+    margin: 10px;
+    background-color: ${props => props.isCompleted ? "green" : "#0a0a0a"};
+    justify-content: center;
+    width: 120px;
+    height: 200px;
 `;
 
-export const Name = styled.p`
+export const Text = styled.p`
     font-size: 12px;
-    color: #dedede
+    color: white;
+`;
+
+export const ImageWrapper = styled.div`
+    max-width: 64px;
+    align-self: center;
+    margin-bottom: 10px;
 `;
 
 export const Image = styled.img`
-    width: 100px
-    height: 100px;
+    width: 100%;
+    max-height: 130px;
 `;
 
-export const Quantity = styled.p`
+//background-color: #0a0a0a;
+
+export const Tracker = styled.div`
+
+`;
+
+export const Button = styled.button`
     font-size: 12px;
-    color: #dedede
+    color: #dedede;
 `;

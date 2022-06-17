@@ -1,17 +1,26 @@
-import { Container, Name, Image, Quantity } from './styles/product'
+import { Container, Image, Tracker, Button, Text, ImageWrapper } from './styles/item'
+import React from 'react'
 
-export default function Item() {
-    <Container></Container>
+export default function Item({children}) {
+    return <Container>{children}</Container>
 }
 
-Item.Name = function ItemName() {
-    return <Name></Name>
+Item.Text = function ItemText({txt}) {
+    return <Text>{txt}</Text>
 }
 
-Item.Nutrient = function ItemImage() {
-    return <Image></Image>
+Item.ImageWrapper = function ItemImageWrapper({children}) {
+    return <ImageWrapper>{children}</ImageWrapper>
 }
 
-Item.Nutrient = function ItemQuantity() {
-    return <Quantity></Quantity>
+Item.Image = function ItemImage({src}) {
+    return <Image src={src} />
+}
+
+Item.Tracker = function ItemTracker({children}) {
+    return <Tracker>{children}</Tracker>
+}
+
+Item.Button = function ItemButton() {
+    return <Button></Button>
 }
