@@ -1,6 +1,6 @@
 import useQuantity from "../Hooks/useQuantity"
 
-export const Counter = ({ neededValue, setIsCompleted }) => {
+export const Counter = ({ neededValue }) => {
 const quantity = useQuantity()
 
 const decrement = () => {
@@ -10,7 +10,6 @@ const decrement = () => {
 const increment = () => {
   quantity.setValue(quantity.value + 1);
 };
-
 
 return (
   <>

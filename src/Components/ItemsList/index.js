@@ -10,6 +10,11 @@ export default function ItemsList() {
     const quantity = useQuantity;
     const [isCompleted, setIsCompleted] = useState(false)
 
+    function toggleCompleted() {
+        setIsCompleted({isCompleted: !isCompleted})
+        console.log(isCompleted)
+    }
+
     return (
         <div style={{display: "flex", flexWrap: "wrap", justifyContent: "space-around"}}>
             {allQuestsData.map(item => {
@@ -18,6 +23,7 @@ export default function ItemsList() {
                         <>
                             <Container isCompleted={isCompleted}>
                                 <Item>
+                                    <Item.Text>{item.shortName}</Item.Text>
                                     <Item.ImageWrapper>
                                         <Item.Image src={item.img}/>
                                     </Item.ImageWrapper>
@@ -25,7 +31,7 @@ export default function ItemsList() {
                                         <Counter quantity={quantity} neededValue={item.quest} setIsCompleted={setIsCompleted} />
                                     </Item.Tracker>
                                 </Item>
-                            </Container> 
+                            </Container>
                         </>
                     )
                 })

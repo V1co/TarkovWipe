@@ -11,14 +11,14 @@ export const Container = styled.div`
 `;
 
 export const Text = styled.p`
-    font-size: 12px;
-    color: white;
+    font-size: 14px;
+    color: rgb(154, 136, 102);
 `;
 
 export const ImageWrapper = styled.div`
     max-width: 64px;
     align-self: center;
-    margin-bottom: 10px;
+    margin: 10px 0px;
 `;
 
 export const Image = styled.img`

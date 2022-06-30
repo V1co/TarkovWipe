@@ -5,8 +5,8 @@ export default function Item({children}) {
     return <Container>{children}</Container>
 }
 
-Item.Text = function ItemText({txt}) {
-    return <Text>{txt}</Text>
+Item.Text = function ItemText({children}) {
+    return <Text>{children}</Text>
 }
 
 Item.ImageWrapper = function ItemImageWrapper({children}) {
